@@ -185,3 +185,12 @@ h6, .h6 {
 .btn.btn-primary{
     margin: 10px;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    img{
+        height: 300px;
+        width: 300px;
+    }
+}
