@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('street');
             $table->integer('homenumber');
             $table->string('sex');
+            $table->boolean('admin')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

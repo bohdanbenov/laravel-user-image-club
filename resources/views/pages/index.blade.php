@@ -2,7 +2,14 @@
 
 @section('content')
     <div class="col-sm-8 blog-main">
-        <h1>Hello from main page</h1>
+        @if(isset($msg))
+            <p>{{ $msg }}</p>
+        @elseif(isset($img_id))
+            <ul>
+                @foreach($img_id as $id)
+                    <li>{{ $id }}</li>
+                @endforeach
+            </ul>
+        @endif
     </div>
 @endsection
-

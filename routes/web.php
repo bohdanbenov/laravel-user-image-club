@@ -19,3 +19,7 @@ Route::post('/register', 'RegistrationController@store');
 Route::get('/login', 'SessionsController@create');
 Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy');
+
+Route::get('/images', 'ImageController@show');
+Route::post('/images', 'ImageController@store');
+Route::get('/images/{img_id}', 'ImageController@destroy');
