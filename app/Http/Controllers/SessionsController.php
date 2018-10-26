@@ -20,7 +20,7 @@ class SessionsController extends Controller
             return back();
         }
 
-        return redirect()->home();
+        return redirect('/images');
     }
 
     public function destroy(){
