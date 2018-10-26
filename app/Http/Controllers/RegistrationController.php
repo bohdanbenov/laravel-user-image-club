@@ -29,7 +29,7 @@ class RegistrationController extends Controller
             'firstname' => request('firstname'),
             'lastname' => request('lastname'),
             'email' => request('email'),
-            'password' => bcrypt(request('firstname')),
+            'password' => bcrypt(request('password')),
             'country' => request('country'),
             'city' => request('city'),
             'street' => request('street'),
