@@ -8,17 +8,6 @@ use GuzzleHttp\Client;
 class MainController extends Controller
 {
     public function index(){
-//        $client = new Client();
-//        $res = $client->request('GET', 'https://api.thecatapi.com/v1/images/search?format=json', [
-//            'headers' => [
-//                'Content-Type' => 'application/json',
-//                'X-API-KEY' => '17d94b92-754f-46eb-99a0-65be65b5d18f'
-//            ]
-//        ]);
-//        $msg = json_decode($res->getBody(), true);
-//
-//        return view('pages.index', compact('msg'));
-
         $img_id = [];
         $img_url = [];
         $client = new Client();
