@@ -17,10 +17,6 @@ class MainController extends Controller
                 $msg = 'Hello admin';
                 return view('pages.index', compact('msg'));
             }
-            else{
-                $msg = "Hello ".auth()->user()->firstname;
-                return view('pages.index', compact('msg'));
-            }
         }
         else{
             for($i = 0; $i < 10; $i++){
