@@ -23,3 +23,6 @@ Route::get('/logout', 'SessionsController@destroy');
 Route::get('/images', 'ImageController@show');
 Route::post('/images', 'ImageController@store');
 Route::get('/images/{img_id}', 'ImageController@destroy');
+
+Route::get('/admin', 'AdminController@index');
+Route::get('/admin/sort', 'AdminController@show');
