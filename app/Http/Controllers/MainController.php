@@ -14,8 +14,7 @@ class MainController extends Controller
 
         if(auth()->check()){
             if(auth()->user()->admin) {
-                $msg = 'Hello admin';
-                return view('pages.index', compact('msg'));
+                return view('pages.admin.index');
             }
         }
         else{
