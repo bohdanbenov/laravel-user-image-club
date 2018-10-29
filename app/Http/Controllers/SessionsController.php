@@ -20,7 +20,10 @@ class SessionsController extends Controller
             return back();
         }
 
-        return redirect('/images');
+        if(auth()->user()->admin)
+            return redirect('/admin');
+        else
+            return redirect('/images');
     }
 
     public function destroy(){
