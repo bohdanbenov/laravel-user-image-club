@@ -2,9 +2,7 @@
 
 @section('content')
     <div class="col-sm-8 blog-main">
-        @if(isset($msg))
-            <p>{{ $msg }}</p>
-        @elseif(isset($img_id) && isset($img_url))
+        @if(isset($img_id) && isset($img_url))
             <h1>Here 10 great pictures for you</h1>
             <div class="grid">
                 @foreach($img_url as $url)
