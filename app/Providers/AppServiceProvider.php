@@ -17,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
-        view()->composer('layouts.sidebar', function($view){
+        view()->composer('layouts.admin_sidebar', function($view){
             $countries = User::all()->pluck('country')->unique();
             $cities = User::all()->pluck('city')->unique();
             $sexes = User::all()->pluck('sex')->unique();
