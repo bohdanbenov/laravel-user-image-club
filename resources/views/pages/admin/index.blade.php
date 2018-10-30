@@ -12,6 +12,7 @@
                         <th scope="col">Country</th>
                         <th scope="col">City</th>
                         <th scope="col">Sex</th>
+                        <th scope="col">Age</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -23,10 +24,15 @@
                         <td>{{ $user->country }}</td>
                         <td>{{ $user->city }}</td>
                         <td>{{ $user->sex }}</td>
+                        <td>{{ $user->age }}</td>
                     </tr>
                 @endforeach
                 </tbody>
             </table>
         @endif
     </div>
+@endsection
+
+@section('sidebar')
+    @include('layouts.admin_sidebar')
 @endsection

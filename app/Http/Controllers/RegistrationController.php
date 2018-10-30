@@ -16,6 +16,7 @@ class RegistrationController extends Controller
         $this->validate(request(), [
             'firstname' => 'required',
             'lastname' => 'required',
+            'age' => 'required',
             'email' => 'required|email',
             'password' => 'required|confirmed',
             'country' => 'max:100',
@@ -28,6 +29,7 @@ class RegistrationController extends Controller
         $user = User::create([
             'firstname' => request('firstname'),
             'lastname' => request('lastname'),
+            'age' => request('age'),
             'email' => request('email'),
             'password' => bcrypt(request('password')),
             'country' => request('country'),
