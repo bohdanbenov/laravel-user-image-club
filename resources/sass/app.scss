@@ -182,8 +182,19 @@ h6, .h6 {
     100% {opacity: 0; display:none;}
 }
 
-.btn.btn-primary{
-    margin: 10px;
+.btn-justify{
+    margin: 0 auto;
+    display: block;
+}
+
+.btn.btn-primary.my-btn {
+    position:absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .grid {
