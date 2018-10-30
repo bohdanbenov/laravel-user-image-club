@@ -25,4 +25,10 @@ Route::post('/images', 'ImageController@store');
 Route::get('/images/{img_id}', 'ImageController@destroy');
 
 Route::get('/admin', 'AdminController@index');
-Route::get('/admin/sort', 'AdminController@show');
+Route::get('/admin/sort', 'AdminController@sort');
+Route::get('/admin/filter/country', 'AdminController@filterByCountry');
+Route::get('/admin/filter/city', 'AdminController@filterByCity');
+Route::get('/admin/filter/sex', 'AdminController@filterBySex');
+Route::get('/admin/filter/age', 'AdminController@filterByAge');
+
+Route::get('/randimg', 'MainController@generateRandomImage');
