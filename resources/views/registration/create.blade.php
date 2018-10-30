@@ -19,6 +19,11 @@
             </div>
 
             <div class="form-group">
+                <label for="age">Age: </label>
+                <input type="text" class="form-control" id="age" name="age" required>
+            </div>
+
+            <div class="form-group">
                 <label for="email">Email: </label>
                 <input type="email" class="form-control" id="email" name="email" required>
             </div>
@@ -64,9 +69,9 @@
             <div class="form-group">
                 <label for="sex">Sex: </label>
                 <select class="custom-select" name="sex" id="sex">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
                 </select>
             </div>
 
@@ -78,4 +83,8 @@
 
         </form>
     </div>
+@endsection
+
+@section('sidebar')
+    @include('layouts.sidebar')
 @endsection

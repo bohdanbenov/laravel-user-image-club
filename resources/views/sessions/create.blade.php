@@ -25,3 +25,7 @@
         </form>
     </div>
 @endsection
+
+@section('sidebar')
+    @include('layouts.sidebar')
+@endsection

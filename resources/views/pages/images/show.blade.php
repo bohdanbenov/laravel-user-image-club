@@ -4,7 +4,7 @@
     <div class="col-sm-8 blog-main">
         <h1>Random image for {{ Auth::user()->firstname }}</h1>
 
-        <div class="card" style="width: 18rem;">
+        <div class="card mx-auto" style="width: 18rem; margin-bottom: 10px;">
             <img class="card-img-top" src="{{ $rand_image[0]['url'] }}" alt="Random image">
             <div class="card-body">
                 <form method="post" action="/images">
@@ -26,7 +26,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group m-auto">
+                    <div class="form-group mx-auto">
                         <button type="submit" class="btn btn-primary">Add to favorites</button>
                     </div>
 
@@ -40,11 +40,11 @@
             @if(isset($all_images))
                 @foreach($all_images as $image)
                     <div class="col-md-6">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 18rem; margin-bottom: 10px;">
                             <img class="card-img-top" src="{{ $image['image_url'] }}" alt="Your favorite picture">
                             <div class="card-body">
                                 <p class="card-text">Image ID: {{ $image['image_id'] }}</p>
-                                <a href="/images/{{ $image['image_id'] }}" class="btn btn-danger">Delete from favorites</a>
+                                <a href="/images/{{ $image['image_id'] }}" class="btn btn-danger mx-auto">Delete from favorites</a>
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">{{ $image['updated_at'] }}</small>
@@ -55,4 +55,8 @@
             @endif
         </div>
     </div>
+@endsection
+
+@section('sidebar')
+    @include('layouts.sidebar')
 @endsection
